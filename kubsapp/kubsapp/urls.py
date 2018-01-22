@@ -14,11 +14,43 @@ Including another URLconf
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
 
-from django.conf.urls import url
+from django.conf.urls import url, include
 from django.contrib import admin
-from Users.views import *
+from notification.views import *
+
 
 urlpatterns = [
-    url(r'^admin/$', admin.site.urls),
-    url(r'^login/$', user_login),
+    url(r'^admin/', include(admin.site.urls)),
+
+    #login(POST)
+    url(r'^login/$', student_login),
+
+    #check studentid(GET)
+    url(r'^id_check/   ##name and studentid##   /$', check_studentid),
+
+    #sign up(POST)
+    url(r'^signup/$', sign_up),
+
+    #set_follow (POST)
+    url(r'^follow/$', set_follow),
+
+    #check_follow
+    url(r'^get_follow/$', check_follow),
+
+    #check_profile
+    url(r'^profile ####   /$', check_profile),
+
+    #post_notice
+    url(r'^post_notice/$', post_notice),
+
+    #post_monthly_schedule
+    url(r'^monthly_schedule ####  /$', post_monthly_schedule),
+
+    #post_daily_schedule
+    url(r'^daily_schedule/$', post_daily_schedule),
+
+    #get_specific_event
+    url(r'^event/## event number ## /$', get_specific_event),
+
+
 ]
