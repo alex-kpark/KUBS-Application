@@ -11,11 +11,13 @@ import json
 def student_login(request):
     if request.method == 'POST':
         try:
-            student_id = Student.objects.get(studentid=request.POST['studentId'], password=request.POST['password'])
-            return HttpResponse(json.dumps({'response':'success'}))
+            student_id = Student.objects.get(studentid=request.POST.get['studentId'], password=request.POST.get['password'])
+            return HttpResponse(json.dumps({'response':'success'}, ensure_ascii=False, content_type="application/json"))
 
         except Exception as e:
-            return HttpResponse(json.dumps({'response':'fail'}))
+            return HttpResponse(json.dumps({'response':'fail'}, ensure_ascii=False, content_type="application/json"))
+
+
 
 def check_studentid(request):
     pass
