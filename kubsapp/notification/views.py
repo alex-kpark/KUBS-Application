@@ -4,6 +4,7 @@ from __future__ import unicode_literals
 
 from notification.models import Student, Notice
 from django.http import HttpResponse, JsonResponse
+from django.shortcuts import render
 import json
 
 # Create your views here.
@@ -11,11 +12,12 @@ import json
 def student_login(request):
     if request.method == 'POST':
         try:
-            student_id = Student.objects.get(studentid=request.POST.get['studentId'], password=request.POST.get['password'])
-            return HttpResponse(json.dumps({'response':'success'}, ensure_ascii=False, content_type="application/json"))
+            student = Student.objects.filter(studentid=request.POST.get('studentId'), password=request.POST.get('password'))
+            return HttpResponse(json.dumps({'response':'success'}, ensure_ascii=False), content_type="application/json")
 
         except Exception as e:
-            return HttpResponse(json.dumps({'response':'fail'}, ensure_ascii=False, content_type="application/json"))
+            print (str(e))
+            return HttpResponse(json.dumps({'response':'fail'}, ensure_ascii=False), content_type="application/json")
 
 
 
