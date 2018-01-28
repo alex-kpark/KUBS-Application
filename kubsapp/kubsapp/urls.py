@@ -26,7 +26,7 @@ urlpatterns = [
     url(r'^login/$', student_login),
 
     #check studentid(GET)
-    url(r'^id_check/   ##name and studentid##   /$', check_studentid),
+    url(r'^check_studentid/$', check_studentid),
 
     #sign up(POST)
     url(r'^signup/$', sign_up),
@@ -38,19 +38,19 @@ urlpatterns = [
     url(r'^get_follow/$', check_follow),
 
     #check_profile
-    url(r'^profile ####   /$', check_profile),
+    url(r'^check_profile/$', check_profile),
 
     #post_notice
     url(r'^post_notice/$', post_notice),
 
     #post_monthly_schedule
-    url(r'^monthly_schedule ####  /$', post_monthly_schedule),
+    url(r'^monthly_schedule/$', post_monthly_schedule),
 
     #post_daily_schedule
     url(r'^daily_schedule/$', post_daily_schedule),
 
     #get_specific_event
-    url(r'^event/## event number ## /$', get_specific_event),
+    url(r'^specific_event/$', get_specific_event),
 
 
 ]

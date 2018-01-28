@@ -14,9 +14,9 @@ class Student(models.Model):
 
 
 class Notice(models.Model):
-    number = models.IntegerField(blank=False)
+    number = models.IntegerField(blank=False, null=True)
     title = models.CharField(max_length=50, blank=False)
-    day = models.DateTimeField()
-    image = models.ImageField()
-    content = models.TextField(max_length=500, blank=False)
-    #auth =
+    day = models.DateTimeField(null=False)
+    image = models.ImageField(null=False)
+    content = models.TextField(max_length=500, blank=False, null=False)
+    auth = models.IntegerField(blank=False, default=1, null=False)
