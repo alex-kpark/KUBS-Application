@@ -9,8 +9,8 @@ class Student(models.Model):
     studentid = models.CharField(max_length=50, blank=False)
     password = models.CharField(max_length=50, blank=False)
     email = models.CharField(max_length=50, blank=False)
-    # auth = models.IntegerField(blank=False, default=1, null=False)
-    #auth needs to be revised
+    # follow = models.
+    # repre = models.IntegerField(blank=False, default=1, null=False) #representative - check whether it has right to post it or not
 
 class Notice(models.Model):
     number = models.IntegerField(blank=False, null=True)
@@ -18,4 +18,4 @@ class Notice(models.Model):
     day = models.DateTimeField(null=False)
     image = models.ImageField(null=False)
     content = models.TextField(max_length=500, blank=False, null=False)
-    # auth = models.IntegerField(blank=False, default=1, null=False)
+    # author = models.IntegerField(blank=False, default=1, null=False) #Check who is the author of the post

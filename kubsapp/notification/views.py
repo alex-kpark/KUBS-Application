@@ -11,6 +11,7 @@ import ast
 
 # Create your views here.
 
+#Done
 def student_login(request):
 
     if request.method == 'POST':
@@ -37,6 +38,7 @@ def check_studentid(request):
     #     # try:
     #     #     result =
 
+#Done
 def sign_up(request):
 
     if request.method == 'POST':
@@ -81,26 +83,23 @@ def set_follow(request):
 def check_follow(request):
     pass
 
-#EOF Error..?
-def check_profile(request):
+
+def check_profile(request, studentId):
     pass
-    # if request.method == 'GET':
-    #     requested_profile_data = request.body
-    #     requested_profile_dict = ast.literal_eval(requested_profile_data)
-    #     print(requested_profile_dict)
-    #
-    #     try:
-    #         student_profile = Student.objects.get(studentid=requested_profile_dict['studentId'])
-    #         print(student_profile)
-    #         print(type(student_profile))
-    #         return HttpResponse(json.dumps({'response':'success'}))
-    #
-    #     except Exception as e:
-    #         print(str(e))
-    #         return HttpResponse(json.dumps({'response':'fail'}))
-    #
-    # else:
-    #     return HttpResponse({'response':'Request is not in GET'})
+    if request.method == 'GET':
+
+        try:
+            received_id_data = studentId
+            profile_selected = Student.objects.get(studentid=received_id_data)
+            profile_name = profile_selected.username
+            return HttpResponse(json.dumps({'response':'success', 'name':profile_name}))
+        
+        except Exception as e:
+            print(str(e))
+            return HttpResponse(json.dumps({'response':'fail'}))
+
+    else:
+        return HttpResponse({'response':'Request is not in GET'})
 
 def post_notice(request):
     if request.method == 'POST':
@@ -134,3 +133,4 @@ def post_daily_schedule(request):
 
 def get_specific_event(request):
     pass
+
