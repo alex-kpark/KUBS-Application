@@ -2,8 +2,6 @@
 from __future__ import print_function
 from __future__ import unicode_literals
 
-from django.db import models
-
 from notification.models import Student, Notice
 from django.http import HttpResponse, JsonResponse
 
