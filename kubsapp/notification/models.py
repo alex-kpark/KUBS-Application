@@ -9,7 +9,7 @@ class Student(models.Model):
     studentid = models.CharField(max_length=50, blank=False)
     password = models.CharField(max_length=50, blank=False)
     email = models.CharField(max_length=50, blank=False)
-    auth = models.IntegerField(blank=False, default=1, null=False)
+    # auth = models.IntegerField(blank=False, default=1, null=False)
     #auth needs to be revised
 
 class Notice(models.Model):
@@ -18,4 +18,4 @@ class Notice(models.Model):
     day = models.DateTimeField(null=False)
     image = models.ImageField(null=False)
     content = models.TextField(max_length=500, blank=False, null=False)
-    auth = models.IntegerField(blank=False, default=1, null=False)
+    # auth = models.IntegerField(blank=False, default=1, null=False)
