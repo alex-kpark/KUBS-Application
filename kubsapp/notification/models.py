@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 from django.db import models
-from multiselectfield import MultiSelectField
+# from multiselectfield import MultiSelectField
 
 # Create your models here.
 
@@ -27,7 +27,7 @@ class Student(models.Model):
         (11, 'ALUMNI')
     )
 
-    follow = MultiSelectField(choices=FOLLOW_CHOICES, max_choices=3, default=0, null=False)
+    # follow = MultiSelectField(choices=FOLLOW_CHOICES, max_choices=3, default=0, null=False)
 
 
 class Notice(models.Model):
