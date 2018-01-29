@@ -6,25 +6,11 @@ from django.db import models
 
 class Student(models.Model):
     username = models.CharField(max_length=30, blank=False)
-    studentid = models.CharField(max_length=10, blank=False)
-    password = models.CharField(max_length=40, blank=False)
-    email = models.CharField(max_length=40, blank=False)
-    #auth =
-
-    # FOLLOW_CHOICES = (
-    #     (0, 'UNDERGRADUATE'),
-    #     (1, 'MBA'),
-    #     (2, 'UD_STUDENT_COUNCIL'),
-    #     (3, 'MBA_STUDENT_COUNCIL'),
-    #     (4, 'CLASS_A'),
-    #     (5, 'CLASS_B'),
-    #     (6, 'CLASS_C'),
-    #     (7, 'CLASS_D'),
-    #     (8, 'CLASS_E'),
-    #     (9, 'KUBS_CLUB'),
-    #     (10, 'KUBS_SOCIETY'),
-    #     (11, 'ALUMNI')
-    # )
+    studentid = models.CharField(max_length=50, blank=False)
+    password = models.CharField(max_length=50, blank=False)
+    email = models.CharField(max_length=50, blank=False)
+    auth = models.IntegerField(blank=False, default=1, null=False)
+    #auth needs to be revised
 
 class Notice(models.Model):
     number = models.IntegerField(blank=False, null=True)
