@@ -44,7 +44,7 @@ urlpatterns = [
     url(r'^post_notice/$', post_notice),
 
     #post_monthly_schedule
-    url(r'^monthly_schedule/$', post_monthly_schedule),
+    url(r'^monthly_schedule/([0-9]{4})-([0-9]{2})/$', post_monthly_schedule),
 
     #post_daily_schedule
     url(r'^daily_schedule/$', post_daily_schedule),

@@ -14,13 +14,16 @@ class Student(models.Model):
     represent = models.CharField(max_length=200, blank=False, default=1, null=False)
 
     def __str__(self):
-        return str(self.follow)
+        return str(self.studentid)
 
 class Notice(models.Model):
-    number = models.IntegerField(blank=False, null=True)
+    number = models.AutoField(blank=False, null=False, primary_key=True, default=1)
     title = models.CharField(max_length=50, blank=False)
     day = models.DateTimeField(null=False)
     image = models.ImageField(null=False)
     content = models.TextField(max_length=500, blank=False, null=False)
     # Check who is the author of the post
     author = models.IntegerField(blank=False, default=1, null=False)
+
+    def __str__(self):
+        return str(self.title)

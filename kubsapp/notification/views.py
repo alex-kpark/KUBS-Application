@@ -11,7 +11,6 @@ import ast
 
 # Create your views here.
 
-#Done
 def student_login(request):
 
     if request.method == 'POST':
@@ -32,8 +31,6 @@ def student_login(request):
 def check_studentid(request):
     return HttpResponse({'response':'not developed'})
 
-
-#Done
 def sign_up(request):
 
     if request.method == 'POST':
@@ -58,8 +55,6 @@ def sign_up(request):
     else:
         return HttpResponse({'response':'Request is not in POST'})
 
-
-
 def set_follow(request):
 
     if request.method == 'POST':
@@ -79,8 +74,6 @@ def set_follow(request):
     else:
         return HttpResponse({'response':'Request is not in POST'})
 
-
-
 def get_follow(request, studentId):
 
     if request.method == 'GET':
@@ -92,7 +85,7 @@ def get_follow(request, studentId):
             selected_user = Student.objects.get(studentid=received_id_data)
             selected_follow = selected_user.follow
             return HttpResponse(json.dumps({'response':'success',
-                                            'name':selected_follow}))
+                                            'follow':selected_follow}))
 
         except Exception as e:
             print(str(e))
@@ -101,9 +94,7 @@ def get_follow(request, studentId):
     else:
         return HttpResponse(json.dumps({'response':'Request is not in GET'}))
 
-
-
-#Auth needs to be added ####################################
+#Auth needs to be added
 def check_profile(request, studentId):
     if request.method == 'GET':
         try:
@@ -120,9 +111,7 @@ def check_profile(request, studentId):
     else:
         return HttpResponse({'response':'Request is not in GET'})
 
-
-
-#Auto Increase ##########
+#Auto Increase
 def post_notice(request):
     if request.method == 'POST':
         received_noti_data = request.body
