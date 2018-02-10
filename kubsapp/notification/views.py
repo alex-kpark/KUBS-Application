@@ -28,15 +28,10 @@ def student_login(request):
     else:
         pass
 
+#Does it need to be done?
 def check_studentid(request):
-    return HttpResponse({'response':'exitsignu'})
-    # if request.method == 'GET':
-    #     received_id_data = request.body
-    #     checkid_data_dict = ast.literal_eval(received_id_data)
-    #     print(check_data_dict)
-    #
-    #     # try:
-    #     #     result =
+    return HttpResponse({'response':'not developed'})
+
 
 #Done
 def sign_up(request):
@@ -64,36 +59,60 @@ def sign_up(request):
         return HttpResponse({'response':'Request is not in POST'})
 
 
+
 def set_follow(request):
-    pass
-    # if request.method == 'POST':
-    #     received_follow_data = request.body
-    #     follow_data_dict = ast.literal_eval(received_follow_data)
-    #
-    # try:
-    #
-    #
-    #
-    #
-    #
-    # except Exception as e:
-    #     print(str(e))
-    #     return HttpResponse(json.dumps({'response':'fail'}))
 
-def check_follow(request):
-    pass
+    if request.method == 'POST':
+        received_setfollow_data = request.body
+        setfollow_data_dict = ast.literal_eval(received_setfollow_data)
+
+        try:
+            target=Student.objects.get(studentid=setfollow_data_dict['studentId'])
+            target.follow = setfollow_data_dict['follow']
+            target.save()
+            return HttpResponse(json.dumps({'response':'success'}))
+
+        except Exception as e:
+            print(str(e))
+            return HttpResponse(json.dumps({'response':'fail'}))
+
+    else:
+        return HttpResponse({'response':'Request is not in POST'})
 
 
-def check_profile(request, studentId):
-    pass
+
+def get_follow(request, studentId):
+
     if request.method == 'GET':
+        # received_checkfollow_data = request.body
+        # checkfollow_data_dict = ast.literal_eval(received_checkfollow_data)
 
+        try:
+            received_id_data = studentId
+            selected_user = Student.objects.get(studentid=received_id_data)
+            selected_follow = selected_user.follow
+            return HttpResponse(json.dumps({'response':'success',
+                                            'name':selected_follow}))
+
+        except Exception as e:
+            print(str(e))
+            return HttpResponse(json.dumps({'response':'fail'}))
+
+    else:
+        return HttpResponse(json.dumps({'response':'Request is not in GET'}))
+
+
+
+#Auth needs to be added ####################################
+def check_profile(request, studentId):
+    if request.method == 'GET':
         try:
             received_id_data = studentId
             profile_selected = Student.objects.get(studentid=received_id_data)
             profile_name = profile_selected.username
-            return HttpResponse(json.dumps({'response':'success', 'name':profile_name}))
-        
+            return HttpResponse(json.dumps({'response':'success',
+                                            'name':profile_name}))
+
         except Exception as e:
             print(str(e))
             return HttpResponse(json.dumps({'response':'fail'}))
@@ -101,6 +120,9 @@ def check_profile(request, studentId):
     else:
         return HttpResponse({'response':'Request is not in GET'})
 
+
+
+#Auto Increase ##########
 def post_notice(request):
     if request.method == 'POST':
         received_noti_data = request.body
@@ -124,6 +146,7 @@ def post_notice(request):
 
     else:
         HttpResponse({'request is not in POST form'})
+
 
 def post_monthly_schedule(request):
     pass

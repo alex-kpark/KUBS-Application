@@ -35,7 +35,7 @@ urlpatterns = [
     url(r'^follow/$', set_follow),
 
     #check_follow
-    url(r'^get_follow/$', check_follow),
+    url(r'^get_follow/([0-9]{10})/$', get_follow),
 
     #check_profile
     url(r'^check_profile/([0-9]{10})/$', check_profile),
