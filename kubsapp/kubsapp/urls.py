@@ -44,10 +44,10 @@ urlpatterns = [
     url(r'^post_notice/$', post_notice),
 
     #post_monthly_schedule
-    url(r'^monthly_schedule/([0-9]{4})-([0-9]{2})/$', post_monthly_schedule),
+    url(r'^monthly_schedule/([0-9]{4})-([0-9]{2})/([0-9]{10})/$', get_monthly_schedule),
 
     #post_daily_schedule
-    url(r'^daily_schedule/$', post_daily_schedule),
+    url(r'^daily_schedule/$', get_daily_schedule),
 
     #get_specific_event
     url(r'^specific_event/$', get_specific_event),

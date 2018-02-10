@@ -11,7 +11,7 @@ class Student(models.Model):
     email = models.CharField(max_length=50, blank=False)
     follow = models.CharField(max_length=200, blank=False)
     # representative - check whether it has right to post it or not
-    represent = models.CharField(max_length=200, blank=False, default=1, null=False)
+    represent = models.CharField(max_length=200, blank=False, default=99, null=False)
 
     def __str__(self):
         return str(self.studentid)
@@ -22,8 +22,8 @@ class Notice(models.Model):
     day = models.DateTimeField(null=False)
     image = models.ImageField(null=False)
     content = models.TextField(max_length=500, blank=False, null=False)
-    # Check who is the author of the post
-    author = models.IntegerField(blank=False, default=1, null=False)
+    # Check who is the author of the post - kubs class classifier : class number
+    author = models.CharField(max_length=20, blank=False, default=1, null=False)
 
     def __str__(self):
         return str(self.title)

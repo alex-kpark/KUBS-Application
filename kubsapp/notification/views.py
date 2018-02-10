@@ -101,9 +101,10 @@ def check_profile(request, studentId):
             received_id_data = studentId
             profile_selected = Student.objects.get(studentid=received_id_data)
             profile_name = profile_selected.username
+            profile_repre = profile_selected.represent
             return HttpResponse(json.dumps({'response':'success',
-                                            'name':profile_name}))
-
+                                            'name':profile_name,
+                                            'represent':profile_repre}))
         except Exception as e:
             print(str(e))
             return HttpResponse(json.dumps({'response':'fail'}))
@@ -137,10 +138,21 @@ def post_notice(request):
         HttpResponse({'request is not in POST form'})
 
 
-def post_monthly_schedule(request):
+def get_monthly_schedule(request, year_month, studentId):
+    # if request.method == 'GET':
+    #     try:
+    #         received_time_data = year_month
+    #         received_user_data = studentId
+    #
+    #     except Exception as e:
+    #         print(str(e))
+    #         return HttpResponse(json.dumps({'response':'fail'}))
+    #
+    # else:
+    #     return HttpResponse(json.dumps({'response':'Request is not in GET form'}))
     pass
 
-def post_daily_schedule(request):
+def get_daily_schedule(request):
     pass
 
 def get_specific_event(request):
