@@ -139,17 +139,21 @@ def post_notice(request):
 
 
 def get_monthly_schedule(request, year_month, studentId):
-    # if request.method == 'GET':
-    #     try:
-    #         received_time_data = year_month
-    #         received_user_data = studentId
-    #
-    #     except Exception as e:
-    #         print(str(e))
-    #         return HttpResponse(json.dumps({'response':'fail'}))
-    #
-    # else:
-    #     return HttpResponse(json.dumps({'response':'Request is not in GET form'}))
+
+    if request.method == 'GET':
+        try:
+            received_time_data = year_month
+            received_user_data = studentId
+            month_data = Notice.objects.get()
+
+        except Exception as e:
+            print(str(e))
+            return HttpResponse(json.dumps({'response':'fail'}))
+
+    else:
+        return HttpResponse(json.dumps({'response':'Request is not in GET form'}))
+
+
     pass
 
 def get_daily_schedule(request):
