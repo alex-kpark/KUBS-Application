@@ -194,13 +194,13 @@ def get_daily_schedule(request, year, month, day, id):
                 input_month = str(result.day)[5:7]
                 input_day = str(result.day)[8:10]
 
-                # print("test"+input_day+"!")
-                # print("test"+day+"!")
+                # print("test"+input_month+"!")
+                # print("test"+month+"!")
 
                 if str(input_day) == str(day):
-                    dict = {'number':result.number, 'title':str(result.title), 'author':str(result.author), 'day':str(result.day)}
-                    # print(dict)
-                    sending_list.append(dict)
+                    if str(input_month) == str(month):
+                        dict = {'number':result.number, 'title':str(result.title), 'author':str(result.author), 'day':str(result.day)}
+                        sending_list.append(dict)
 
                 else:
                     pass
@@ -237,6 +237,23 @@ def get_specific_event(request, num):
                                             'title':sending_title,
                                             'content':sending_content,
                                             'image':sending_image}))
+
+        except Exception as e:
+            print(str(e))
+            return HttpResponse(json.dumps({'response':'fail'}))
+
+    else:
+        return HttpResponse(json.dumps({'response':'Request is not in GET form'}))
+
+
+def check_email(request, studentId):
+
+    if request.method == 'GET':
+        try:
+            selected_data = Student.objects.get(studentid=studentId)
+            sending_mail = selected_data.email
+
+            return HttpResponse(json.dumps({'email':sending_mail}))
 
         except Exception as e:
             print(str(e))
