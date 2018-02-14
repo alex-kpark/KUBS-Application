@@ -216,27 +216,31 @@ def get_daily_schedule(request, year, month, day, id):
         return HttpResponse(json.dumps({'response':'Request is not in GET form'}))
 
 
-def get_specific_event(request):
+def get_specific_event(request, num):
     pass
 
-    # if request.method == 'GET':
-    #
-    #     received_data = request.body
-    #     print(received_data)
-    #
-    #     # try:
-    #     #     # selected_notice = Notice.objects.get(number=num)
-    #     #     # print(selected_notice)
-    #     #
-    #     #
-    #     #
-    #     # except Exception as e:
-    #     #     print(str(e))
-    #     #     return HttpResponse(json.dumps({'response':'fail'}))
-    #
-    #     return HttpResponse(json.dumps({'response':'good'}))
-    #
-    # else:
-    #     return HttpResponse(json.dumps({'response':'Request is not in GET form'}))
+    if request.method == 'GET':
 
+        try:
+            selected_notice = Notice.objects.get(number=num)
+            sending_number = selected_notice.number
+            sending_author = selected_notice.author
+            sending_day = str(selected_notice.day)
+            sending_title = selected_notice.title
+            sending_content = selected_notice.content
+            sending_image = str(selected_notice.image)
 
+            return HttpResponse(json.dumps({'response':'success',
+                                            'no':sending_number,
+                                            'author':sending_author,
+                                            'day':sending_day,
+                                            'title':sending_title,
+                                            'content':sending_content,
+                                            'image':sending_image}))
+
+        except Exception as e:
+            print(str(e))
+            return HttpResponse(json.dumps({'response':'fail'}))
+
+    else:
+        return HttpResponse(json.dumps({'response':'Request is not in GET form'}))

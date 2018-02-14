@@ -50,5 +50,5 @@ urlpatterns = [
     url(r'^daily_schedule/([0-9]{4})-([0-9]{2})-([0-9]{2})/([0-9]{10})/$', get_daily_schedule),
 
     #get_specific_event
-    url(r'^event/[0-9]+/$', get_specific_event),
+    url(r'^event/([0-9]+)/$', get_specific_event),
 ]
