@@ -145,16 +145,27 @@ def get_monthly_schedule(request, year, month, id):
             received_year_data = year
             received_month_data = month
             received_user_data = id
-            print(received_year_data)
-            print(received_month_data)
-            print(received_user_data)
 
-            # sending_info = Notice()
+            request_student = Student.objects.get(studentid=id)
+            follow_info = request_student.follow
 
-            print(type(received_month_data)) #why unicode
+            info = follow_info.split(',')
+            list = []
+            number = -1
+            for i in info:
+                number += 1
+                if i == 'True':
+                    list.append(number)
+            # print(list)
 
+            results = Notice.objects.filter(author__in=list)
 
-            return HttpResponse(json.dumps({'response':'success'}))
+            sending_list=[]
+            for result in results:
+                sending_list.append(str(result.day))
+                # print(sending_list)
+            return HttpResponse(json.dumps({'response':'success',
+                                            'list':sending_list}))
 
         except Exception as e:
             print(str(e))

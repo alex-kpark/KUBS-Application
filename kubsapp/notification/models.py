@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 from django.db import models
 
+
 # Create your models here.
 
 
@@ -16,13 +17,14 @@ class Student(models.Model):
     def __str__(self):
         return str(self.studentid)
 
+
 class Notice(models.Model):
-    number = models.AutoField(blank=False, null=False, primary_key=True, default=1)
+    number = models.CharField(max_length=20, blank=False, null=False, primary_key=True, default=1)
     title = models.CharField(max_length=50, blank=False)
     day = models.DateTimeField(null=False)
-    image = models.ImageField(null=False)
+    image = models.ImageField(null=True)
     content = models.TextField(max_length=500, blank=False, null=False)
-    # Check who is the author of the post - kubs class classifier : class number
+    # Check who is the author of the post - kubs class classifier : class number (which class)
     author = models.CharField(max_length=20, blank=False, default=1, null=False)
 
     def __str__(self):
