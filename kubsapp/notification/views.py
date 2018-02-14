@@ -246,18 +246,39 @@ def get_specific_event(request, num):
         return HttpResponse(json.dumps({'response':'Request is not in GET form'}))
 
 
-def check_email(request, studentId):
-
-    if request.method == 'GET':
-        try:
-            selected_data = Student.objects.get(studentid=studentId)
-            sending_mail = selected_data.email
-
-            return HttpResponse(json.dumps({'email':sending_mail}))
-
-        except Exception as e:
-            print(str(e))
-            return HttpResponse(json.dumps({'response':'fail'}))
-
-    else:
-        return HttpResponse(json.dumps({'response':'Request is not in GET form'}))
+def check_email(request):
+    pass
+    # if request.method == 'GET':
+    #     try:
+    #         email_0 = Student.objects.get(represent='0').email
+    #         email_1 = Student.objects.get(represent='1').email
+    #         email_2 = Student.objects.get(represent='2').email
+    #         # email_3 = Student.objects.get(represent='3').email
+    #         # email_4 = Student.objects.get(represent='4').email
+    #         # email_5 = Student.objects.get(represent='5').email
+    #         # email_6 = Student.objects.get(represent='6').email
+    #         # email_7 = Student.objects.get(represent='7').email
+    #         # email_8 = Student.objects.get(represent='8').email
+    #         # email_9 = Student.objects.get(represent='9').email
+    #         # email_10 = Student.objects.get(represent='10').email
+    #         # email_11 = Student.objects.get(represent='11').email
+    #
+    #         return HttpResponse(json.dumps({'0':email_0,
+    #                                         '1':email_1,
+    #                                         '2': email_2}))
+    #                                         # '3': email_3,
+    #                                         # '4': email_4,
+    #                                         # '5': email_5,
+    #                                         # '6': email_6,
+    #                                         # '7': email_7,
+    #                                         # '8': email_8,
+    #                                         # '9': email_9,
+    #                                         # '10': email_10,
+    #                                         # '11': email_11}))
+    #
+    #     except Exception as e:
+    #         print(str(e))
+    #         return HttpResponse(json.dumps({'response':'fail'}))
+    #
+    # else:
+    #     return HttpResponse(json.dumps({'response':'Request is not in GET form'}))

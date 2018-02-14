@@ -53,5 +53,5 @@ urlpatterns = [
     url(r'^event/([0-9]+)/$', get_specific_event),
 
     #send_email
-    url(r'^email/([0-9]{10})/$', check_email),
+    url(r'^email/$', check_email),
 ]
