@@ -138,13 +138,23 @@ def post_notice(request):
         HttpResponse({'request is not in POST form'})
 
 
-def get_monthly_schedule(request, year_month, studentId):
+def get_monthly_schedule(request, year, month, id):
 
     if request.method == 'GET':
         try:
-            received_time_data = year_month
-            received_user_data = studentId
-            month_data = Notice.objects.get()
+            received_year_data = year
+            received_month_data = month
+            received_user_data = id
+            print(received_year_data)
+            print(received_month_data)
+            print(received_user_data)
+
+            # sending_info = Notice()
+
+            print(type(received_month_data)) #why unicode
+
+
+            return HttpResponse(json.dumps({'response':'success'}))
 
         except Exception as e:
             print(str(e))
@@ -154,10 +164,9 @@ def get_monthly_schedule(request, year_month, studentId):
         return HttpResponse(json.dumps({'response':'Request is not in GET form'}))
 
 
-    pass
-
 def get_daily_schedule(request):
     pass
+
 
 def get_specific_event(request):
     pass
