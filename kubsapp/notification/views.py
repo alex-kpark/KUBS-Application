@@ -142,13 +142,9 @@ def get_monthly_schedule(request, year, month, id):
 
     if request.method == 'GET':
         try:
-            received_year_data = year
-            received_month_data = month
-            received_user_data = id
 
             request_student = Student.objects.get(studentid=id)
             follow_info = request_student.follow
-
             info = follow_info.split(',')
             list = []
             number = -1
@@ -156,13 +152,14 @@ def get_monthly_schedule(request, year, month, id):
                 number += 1
                 if i == 'True':
                     list.append(number)
-            # print(list)
-
             results = Notice.objects.filter(author__in=list)
 
             sending_list=[]
             for result in results:
-                sending_list.append(str(result.day))
+                input = str(result.day)[0:7]
+                input_month = input[5:7]
+                if input_month == month:
+                    sending_list.append(str(result.day))
                 # print(sending_list)
             return HttpResponse(json.dumps({'response':'success',
                                             'list':sending_list}))
@@ -175,10 +172,71 @@ def get_monthly_schedule(request, year, month, id):
         return HttpResponse(json.dumps({'response':'Request is not in GET form'}))
 
 
-def get_daily_schedule(request):
-    pass
+def get_daily_schedule(request, year, month, day, id):
+
+    if request.method == 'GET':
+        try:
+            request_student = Student.objects.get(studentid=id)
+            follow_info = request_student.follow
+            info = follow_info.split(',')
+            list = []
+            number = -1
+            for i in info:
+                number += 1
+                if i == 'True':
+                    list.append(number)
+            results = Notice.objects.filter(author__in=list)
+            # print(list)
+
+            sending_list = []
+            for result in results:
+                input = str(result.day)[0:11]
+                input_month = str(result.day)[5:7]
+                input_day = str(result.day)[8:10]
+
+                # print("test"+input_day+"!")
+                # print("test"+day+"!")
+
+                if str(input_day) == str(day):
+                    dict = {'number':result.number, 'title':str(result.title), 'author':str(result.author), 'day':str(result.day)}
+                    # print(dict)
+                    sending_list.append(dict)
+
+                else:
+                    pass
+
+            return HttpResponse(json.dumps({'response':'success',
+                                            'daily':sending_list}))
+
+        except Exception as e:
+            print(str(e))
+            return HttpResponse(json.dumps({'response':'fail'}))
+
+    else:
+        return HttpResponse(json.dumps({'response':'Request is not in GET form'}))
 
 
 def get_specific_event(request):
     pass
+
+    # if request.method == 'GET':
+    #
+    #     received_data = request.body
+    #     print(received_data)
+    #
+    #     # try:
+    #     #     # selected_notice = Notice.objects.get(number=num)
+    #     #     # print(selected_notice)
+    #     #
+    #     #
+    #     #
+    #     # except Exception as e:
+    #     #     print(str(e))
+    #     #     return HttpResponse(json.dumps({'response':'fail'}))
+    #
+    #     return HttpResponse(json.dumps({'response':'good'}))
+    #
+    # else:
+    #     return HttpResponse(json.dumps({'response':'Request is not in GET form'}))
+
 
