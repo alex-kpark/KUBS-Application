@@ -199,7 +199,7 @@ def get_daily_schedule(request, year, month, day, id):
 
                 if str(input_day) == str(day):
                     if str(input_month) == str(month):
-                        dict = {'number':result.number, 'title':str(result.title), 'author':str(result.author), 'day':str(result.day)}
+                        dict = {'number':result.number, 'title':result.title , 'author':str(result.author), 'day':str(result.day)}
                         sending_list.append(dict)
 
                 else:
