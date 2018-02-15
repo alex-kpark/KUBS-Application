@@ -20,7 +20,7 @@ class Student(models.Model):
 
 
 class Notice(models.Model):
-    number = models.CharField(max_length=20, blank=False, null=False, primary_key=True, default=1)
+    number = models.CharField(max_length=30, blank=False, primary_key=True, null=False, default=1)
     title = models.CharField(max_length=50, blank=False)
     day = models.DateTimeField(null=False)
     image = models.CharField(max_length=300, blank=True, null=True)
