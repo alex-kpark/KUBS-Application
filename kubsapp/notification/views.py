@@ -113,19 +113,28 @@ def check_profile(request, studentId):
     else:
         return HttpResponse({'response':'Request is not in GET'})
 
+
 def post_notice(request):
     if request.method == 'POST':
         received_noti_data = request.body
         received_noti_dict = ast.literal_eval(received_noti_data)
 
         try:
-            new_noti = Notice(author=received_noti_dict['auth'],
-                              day=received_noti_dict['day'],
-                              title=received_noti_dict['title'],
-                              content=received_noti_dict['content'],
-                              image=received_noti_dict['image']
-                              )
-            new_noti.save()
+            fetched_num = (received_noti_dict['number'])
+
+            update_noti = Notice.objects.get(number=fetched_num)
+
+            print(received_noti_dict['day'])
+
+            #Day not fixed
+
+            update_noti.day = received_noti_dict['day']
+            update_noti.author = received_noti_dict['auth']
+            update_noti.title = received_noti_dict['title']
+            update_noti.content = received_noti_dict['content']
+            update_noti.image = received_noti_dict['image']
+
+            update_noti.save()
             return HttpResponse(json.dumps({'response':'success'}))
 
         except Exception as e:
@@ -134,6 +143,7 @@ def post_notice(request):
 
     else:
         return HttpResponse({'request is not in POST form'})
+
 
 def number_increase(request, auth):
     if request.method == 'POST':
@@ -144,11 +154,18 @@ def number_increase(request, auth):
 
         if (0<=received_auth<12 or received_auth==100):
             try:
-                max_dict = Notice.objects.all().aggregate(Max('number'))
-                max_num = int(max_dict['number__max'])
-                sending_num = max_num + 1
+
+                max_num = Notice.objects.count()
+
+                # max_dict = Notice.objects.latest('number')
+                # max_num = int(max_dict.number)
+
+                sending_num = max_num+1
+                print(sending_num)
 
                 new_info = Notice(number=sending_num)
+                print(new_info)
+
                 new_info.save()
 
                 return HttpResponse(json.dumps({'response':'success',
