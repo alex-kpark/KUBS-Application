@@ -18,12 +18,11 @@ class Student(models.Model):
     def __str__(self):
         return str(self.studentid)
 
-
 class Notice(models.Model):
     #Auto Field not solved
-    number = models.CharField(max_length=30, blank=False, primary_key=True, null=False, default=1)
+    number = models.CharField(max_length=40, blank=False, primary_key=True, null=False, default=1)
     title = models.CharField(max_length=50, blank=False)
-    day = models.DateTimeField(null=False)
+    day = models.CharField(max_length=200, blank=True, null=False)
     image = models.CharField(max_length=300, blank=True, null=True)
     content = models.TextField(max_length=500, blank=False, null=False)
     # Check who is the author of the post - kubs class classifier : class number (which class)
