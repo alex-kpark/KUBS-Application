@@ -4,6 +4,7 @@ from __future__ import unicode_literals
 
 from notification.models import Student, Notice
 from django.http import HttpResponse, JsonResponse
+from django.db.models import Max
 
 from django.shortcuts   import render
 import json
@@ -112,7 +113,6 @@ def check_profile(request, studentId):
     else:
         return HttpResponse({'response':'Request is not in GET'})
 
-#Auto Increase
 def post_notice(request):
     if request.method == 'POST':
         received_noti_data = request.body
@@ -135,8 +135,32 @@ def post_notice(request):
             return HttpResponse(json.dumps({'response':'fail'}))
 
     else:
-        HttpResponse({'request is not in POST form'})
+        return HttpResponse({'request is not in POST form'})
 
+def number_increase(request, auth):
+    if request.method == 'POST':
+
+        received_data = request.body
+        received_dict = ast.literal_eval(received_data)
+        received_auth = int(received_dict['auth'])
+
+        if (received_auth>=0 or received_auth<12 or received_auth==100):
+            try:
+                max_dict = Notice.objects.all().aggregate(Max('number'))
+                max_num = int(max_dict['number__max'])
+                sending_num = max_num + 1
+
+                # max = args.aggregate(Max('rating'))
+
+                return HttpResponse(json.dumps({'response':'success',
+                                                'increased':sending_num}))
+
+            except Exception as e:
+                print(str(e))
+                return HttpResponse(json.dumps({'response':'fail'}))
+
+    else:
+        return HttpResponse({'request is not in POST form'})
 
 def get_monthly_schedule(request, year, month, id):
 
