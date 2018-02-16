@@ -37,8 +37,8 @@
       <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/kubsapp/kubsapp/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="475">
-              <caret line="36" column="17" lean-forward="true" selection-start-line="36" selection-start-column="17" selection-end-line="36" selection-end-column="17" />
+            <state relative-caret-position="629">
+              <caret line="49" column="34" lean-forward="false" selection-start-line="49" selection-start-column="34" selection-end-line="49" selection-end-column="34" />
               <folding />
             </state>
           </provider>
@@ -47,18 +47,17 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/kubsapp/notification/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="462">
-              <caret line="146" column="59" lean-forward="false" selection-start-line="146" selection-start-column="59" selection-end-line="146" selection-end-column="59" />
+            <state relative-caret-position="640">
+              <caret line="181" column="0" lean-forward="true" selection-start-line="181" selection-start-column="0" selection-end-line="181" selection-end-column="0" />
               <folding>
                 <element signature="e#24#61#0" expanded="true" />
                 <element signature="e#358#912#0" expanded="false" />
                 <element signature="e#974#1023#0" expanded="false" />
-                <element signature="e#1052#1925#0" expanded="false" />
                 <element signature="e#1957#2554#0" expanded="false" />
-                <element signature="e#5904#6970#0" expanded="false" />
-                <element signature="e#7033#8476#0" expanded="false" />
-                <element signature="e#8521#9635#0" expanded="false" />
-                <element signature="e#9668#11510#0" expanded="false" />
+                <element signature="e#6482#7548#0" expanded="false" />
+                <element signature="e#7611#9054#0" expanded="false" />
+                <element signature="e#9099#10213#0" expanded="false" />
+                <element signature="e#10246#12088#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -83,6 +82,7 @@
       <find>dict_obj</find>
       <find>database</find>
       <find>primary</find>
+      <find>save</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -269,7 +269,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="18" />
+      <option name="time" value="20" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -290,12 +290,11 @@
             <element signature="e#24#61#0" expanded="true" />
             <element signature="e#358#912#0" expanded="false" />
             <element signature="e#974#1023#0" expanded="false" />
-            <element signature="e#1052#1925#0" expanded="false" />
             <element signature="e#1957#2554#0" expanded="false" />
-            <element signature="e#5904#6970#0" expanded="false" />
-            <element signature="e#7033#8476#0" expanded="false" />
-            <element signature="e#8521#9635#0" expanded="false" />
-            <element signature="e#9668#11510#0" expanded="false" />
+            <element signature="e#6482#7548#0" expanded="false" />
+            <element signature="e#7611#9054#0" expanded="false" />
+            <element signature="e#9099#10213#0" expanded="false" />
+            <element signature="e#10246#12088#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -443,14 +442,6 @@
     <entry file="file://$PROJECT_DIR$/kubsapp/nohup.out" />
     <entry file="file://$PROJECT_DIR$/kubsapp/notification/migrations/0017_auto_20180215_2043.py" />
     <entry file="file://$PROJECT_DIR$/kubsapp/notification/migrations/0016_auto_20180215_2041.py" />
-    <entry file="file://$PROJECT_DIR$/kubsapp/kubsapp/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="28" column="12" lean-forward="false" selection-start-line="28" selection-start-column="12" selection-end-line="28" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/kubsapp/notification/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
@@ -459,28 +450,35 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/kubsapp/kubsapp/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="28" column="12" lean-forward="false" selection-start-line="28" selection-start-column="12" selection-end-line="28" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/kubsapp/kubsapp/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="36" column="17" lean-forward="true" selection-start-line="36" selection-start-column="17" selection-end-line="36" selection-end-column="17" />
+        <state relative-caret-position="629">
+          <caret line="49" column="34" lean-forward="false" selection-start-line="49" selection-start-column="34" selection-end-line="49" selection-end-column="34" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/kubsapp/notification/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="146" column="59" lean-forward="false" selection-start-line="146" selection-start-column="59" selection-end-line="146" selection-end-column="59" />
+        <state relative-caret-position="640">
+          <caret line="181" column="0" lean-forward="true" selection-start-line="181" selection-start-column="0" selection-end-line="181" selection-end-column="0" />
           <folding>
             <element signature="e#24#61#0" expanded="true" />
             <element signature="e#358#912#0" expanded="false" />
             <element signature="e#974#1023#0" expanded="false" />
-            <element signature="e#1052#1925#0" expanded="false" />
             <element signature="e#1957#2554#0" expanded="false" />
-            <element signature="e#5904#6970#0" expanded="false" />
-            <element signature="e#7033#8476#0" expanded="false" />
-            <element signature="e#8521#9635#0" expanded="false" />
-            <element signature="e#9668#11510#0" expanded="false" />
+            <element signature="e#6482#7548#0" expanded="false" />
+            <element signature="e#7611#9054#0" expanded="false" />
+            <element signature="e#9099#10213#0" expanded="false" />
+            <element signature="e#10246#12088#0" expanded="false" />
           </folding>
         </state>
       </provider>

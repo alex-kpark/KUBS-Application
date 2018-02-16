@@ -154,13 +154,32 @@ def number_increase(request, auth):
 
                 return HttpResponse(json.dumps({'response':'success',
                                                 'increased':sending_num}))
-
             except Exception as e:
                 print(str(e))
                 return HttpResponse(json.dumps({'response':'fail'}))
+    else:
+        return HttpResponse({'request is not in POST form'})
+
+
+def delete_post(request, auth):
+    if request.method == 'POST':
+
+        received_data = request.body
+        received_dict = ast.literal_eval(received_data)
+        received_num = int(received_dict['number'])
+
+        try:
+            target = Notice.objects.get(number=received_num)
+            target.delete()
+            return HttpResponse(json.dumps({'response':'success'}))
+
+        except Exception as e:
+            print(str(e))
+            return HttpResponse(json.dumps({'response':'fail'}))
 
     else:
         return HttpResponse({'request is not in POST form'})
+
 
 def get_monthly_schedule(request, year, month, id):
 

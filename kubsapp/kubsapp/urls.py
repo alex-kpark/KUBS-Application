@@ -43,8 +43,11 @@ urlpatterns = [
     #post_notice
     url(r'^post_notice/$', post_notice),
 
-    # increase the number
+    #increase the number
     url(r'^post/([0-9]+)/$', number_increase),
+
+    #delete notice with given number
+    url(r'delete_post/([0-9]+)/$', delete_post),
 
     #get_monthly_schedule
     url(r'^monthly_schedule/([0-9]{4})-([0-9]{2})/([0-9]{10})/$', get_monthly_schedule),
