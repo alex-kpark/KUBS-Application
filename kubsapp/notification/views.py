@@ -121,7 +121,7 @@ def post_notice(request):
         #number is necessary to be added - auto increase
         #null is currently approved temporary way
         try:
-            new_noti = Notice(auth=received_noti_dict['auth'],
+            new_noti = Notice(author=received_noti_dict['auth'],
                               day=received_noti_dict['day'],
                               title=received_noti_dict['title'],
                               content=received_noti_dict['content'],

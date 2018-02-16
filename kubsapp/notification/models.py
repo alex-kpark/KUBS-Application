@@ -20,6 +20,7 @@ class Student(models.Model):
 
 
 class Notice(models.Model):
+    #Auto Field not solved
     number = models.CharField(max_length=30, blank=False, primary_key=True, null=False, default=1)
     title = models.CharField(max_length=50, blank=False)
     day = models.DateTimeField(null=False)
