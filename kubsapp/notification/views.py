@@ -118,8 +118,6 @@ def post_notice(request):
         received_noti_data = request.body
         received_noti_dict = ast.literal_eval(received_noti_data)
 
-        #number is necessary to be added - auto increase
-        #null is currently approved temporary way
         try:
             new_noti = Notice(author=received_noti_dict['auth'],
                               day=received_noti_dict['day'],
@@ -150,7 +148,8 @@ def number_increase(request, auth):
                 max_num = int(max_dict['number__max'])
                 sending_num = max_num + 1
 
-                # max = args.aggregate(Max('rating'))
+                new_info = Notice(number=sending_num)
+                new_info.save()
 
                 return HttpResponse(json.dumps({'response':'success',
                                                 'increased':sending_num}))
