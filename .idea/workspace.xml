@@ -47,17 +47,17 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/kubsapp/notification/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="507">
-              <caret line="151" column="31" lean-forward="true" selection-start-line="151" selection-start-column="31" selection-end-line="151" selection-end-column="31" />
+            <state relative-caret-position="657">
+              <caret line="161" column="48" lean-forward="false" selection-start-line="161" selection-start-column="48" selection-end-line="161" selection-end-column="48" />
               <folding>
                 <element signature="e#24#61#0" expanded="true" />
                 <element signature="e#358#912#0" expanded="false" />
                 <element signature="e#974#1023#0" expanded="false" />
                 <element signature="e#1957#2554#0" expanded="false" />
-                <element signature="e#6407#7473#0" expanded="false" />
-                <element signature="e#7536#8979#0" expanded="false" />
-                <element signature="e#9024#10138#0" expanded="false" />
-                <element signature="e#10171#12013#0" expanded="false" />
+                <element signature="e#6500#7566#0" expanded="false" />
+                <element signature="e#7629#9072#0" expanded="false" />
+                <element signature="e#9117#10231#0" expanded="false" />
+                <element signature="e#10264#12106#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -291,10 +291,10 @@
             <element signature="e#358#912#0" expanded="false" />
             <element signature="e#974#1023#0" expanded="false" />
             <element signature="e#1957#2554#0" expanded="false" />
-            <element signature="e#6407#7473#0" expanded="false" />
-            <element signature="e#7536#8979#0" expanded="false" />
-            <element signature="e#9024#10138#0" expanded="false" />
-            <element signature="e#10171#12013#0" expanded="false" />
+            <element signature="e#6500#7566#0" expanded="false" />
+            <element signature="e#7629#9072#0" expanded="false" />
+            <element signature="e#9117#10231#0" expanded="false" />
+            <element signature="e#10264#12106#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -468,17 +468,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/kubsapp/notification/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="507">
-          <caret line="151" column="31" lean-forward="true" selection-start-line="151" selection-start-column="31" selection-end-line="151" selection-end-column="31" />
+        <state relative-caret-position="657">
+          <caret line="161" column="48" lean-forward="false" selection-start-line="161" selection-start-column="48" selection-end-line="161" selection-end-column="48" />
           <folding>
             <element signature="e#24#61#0" expanded="true" />
             <element signature="e#358#912#0" expanded="false" />
             <element signature="e#974#1023#0" expanded="false" />
             <element signature="e#1957#2554#0" expanded="false" />
-            <element signature="e#6407#7473#0" expanded="false" />
-            <element signature="e#7536#8979#0" expanded="false" />
-            <element signature="e#9024#10138#0" expanded="false" />
-            <element signature="e#10171#12013#0" expanded="false" />
+            <element signature="e#6500#7566#0" expanded="false" />
+            <element signature="e#7629#9072#0" expanded="false" />
+            <element signature="e#9117#10231#0" expanded="false" />
+            <element signature="e#10264#12106#0" expanded="false" />
           </folding>
         </state>
       </provider>

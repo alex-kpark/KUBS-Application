@@ -142,7 +142,7 @@ def number_increase(request, auth):
         received_dict = ast.literal_eval(received_data)
         received_auth = int(received_dict['auth'])
 
-        if (received_auth>=0 or received_auth<12 or received_auth==100):
+        if (0<=received_auth<12 or received_auth==100):
             try:
                 max_dict = Notice.objects.all().aggregate(Max('number'))
                 max_num = int(max_dict['number__max'])
@@ -156,6 +156,10 @@ def number_increase(request, auth):
             except Exception as e:
                 print(str(e))
                 return HttpResponse(json.dumps({'response':'fail'}))
+
+        else:
+            print('author is not approved')
+            return HttpResponse('Approval denied')
     else:
         return HttpResponse({'request is not in POST form'})
 
