@@ -2,12 +2,13 @@
 from django.contrib import admin
 import site
 
-from .models import Student, Notice
+from .models import Student, Notice, Push
 
 # Register your models here.
 
 admin.site.register(Student)
 admin.site.register(Notice)
+admin.site.register(Push)
 
 class StudentAdmin(admin.ModelAdmin):
     #Filtering by studentid
@@ -21,3 +22,7 @@ class NoticeAdmin(admin.ModelAdmin):
     list_filter = ('title', 'day',)
     search_fields = ('number', 'day',)
     ordering = ('-number',)
+
+
+class PushAdmin(admin.ModelAdmin):
+    list_filter = ('push_title', 'push_author')

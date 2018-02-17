@@ -2,7 +2,7 @@
 from __future__ import print_function
 from __future__ import unicode_literals
 
-from notification.models import Student, Notice
+from notification.models import Student, Notice, Push
 from django.http import HttpResponse, JsonResponse
 from django.db.models import Max
 from pyfcm import FCMNotification
@@ -196,7 +196,6 @@ def get_monthly_schedule(request, year, month, id):
 
     if request.method == 'GET':
         try:
-
             request_student = Student.objects.get(studentid=id)
             follow_info = request_student.follow
             info = follow_info.split(',')
@@ -298,41 +297,30 @@ def get_specific_event(request, num):
         return HttpResponse(json.dumps({'response':'Request is not in GET form'}))
 
 def check_email(request):
-    pass
-    # if request.method == 'GET':
-    #     try:
-    #         email_0 = Student.objects.get(represent='0').email
-    #         email_1 = Student.objects.get(represent='1').email
-    #         email_2 = Student.objects.get(represent='2').email
-    #         # email_3 = Student.objects.get(represent='3').email
-    #         # email_4 = Student.objects.get(represent='4').email
-    #         # email_5 = Student.objects.get(represent='5').email
-    #         # email_6 = Student.objects.get(represent='6').email
-    #         # email_7 = Student.objects.get(represent='7').email
-    #         # email_8 = Student.objects.get(represent='8').email
-    #         # email_9 = Student.objects.get(represent='9').email
-    #         # email_10 = Student.objects.get(represent='10').email
-    #         # email_11 = Student.objects.get(represent='11').email
-    #
-    #         return HttpResponse(json.dumps({'0':email_0,
-    #                                         '1':email_1,
-    #                                         '2': email_2}))
-    #                                         # '3': email_3,
-    #                                         # '4': email_4,
-    #                                         # '5': email_5,
-    #                                         # '6': email_6,
-    #                                         # '7': email_7,
-    #                                         # '8': email_8,
-    #                                         # '9': email_9,
-    #                                         # '10': email_10,
-    #                                         # '11': email_11}))
-    #
-    #     except Exception as e:
-    #         print(str(e))
-    #         return HttpResponse(json.dumps({'response':'fail'}))
-    #
-    # else:
-    #     return HttpResponse(json.dumps({'response':'Request is not in GET form'}))
+    if request.method == 'GET':
+
+        try:
+            initial_list = [0,1,2,3,4,5,6,7,8,9,10,11]
+            sending_list = []
+
+            for list in initial_list:
+                try:
+                    sam = Student.objects.get(represent=list)
+                    sending_list.append(sam.email)
+
+                except Exception as e:
+                    sam = Student.objects.get(represent=100)
+                    sending_list.append(sam.email)
+
+            return HttpResponse(json.dumps({'response':'success',
+                                            'email':sending_list}))
+
+        except Exception as e:
+            print(str(e))
+            return HttpResponse(json.dumps({'response':'fail'}))
+
+    else:
+        return HttpResponse(json.dumps({'response':'Request is not in GET form'}))
 
 def send_push(request):
 
@@ -352,6 +340,9 @@ def send_push(request):
 
             result = push_service.notify_topic_subscribers(topic_name=str(push_topic), message_body=message_body, message_title=message_title)
 
+            sent_push = Push(push_author=push_topic, push_title=push_msg)
+            sent_push.save()
+
             return HttpResponse(json.dumps({'response':'success'}))
 
         except Exception as e:
@@ -361,13 +352,41 @@ def send_push(request):
     else:
         return HttpResponse('Request is not in POST form')
 
+def push_feed(request, id):
 
+    if request.method == 'GET':
 
+        received_id = id
+        selected_user = Student.objects.get(studentid=received_id)
+        selected_follow = selected_user.follow
+        list_follow = selected_follow.split(',')
 
+        push_list = []
+        num = 0
 
+        for list in list_follow:
+            if list == 'True':
+                push_list.append(num)
+                num = num+1
+            else:
+                num = num+1
 
+        sending_list = []
 
+        for list in push_list:
+            sending_dict = {}
+            try:
+                tar = list
+                target = Push.objects.get(push_author=tar)
 
+                sending_dict['author'] = target.push_author
+                sending_dict['title'] = target.push_title
+                sending_list.append(sending_dict)
 
+            except Exception as e:
+                pass
 
-
+        return HttpResponse(json.dumps({'response': 'success',
+                                        'list':sending_list}))
+    else:
+        return HttpResponse('Request is not in GET form')

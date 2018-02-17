@@ -63,4 +63,7 @@ urlpatterns = [
 
     #push
     url(r'^push/$', send_push),
+
+    #push_feed
+    url(r'^feed/([0-9]{10})/$', push_feed),
 ]
