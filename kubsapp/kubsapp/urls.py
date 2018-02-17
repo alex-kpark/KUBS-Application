@@ -60,4 +60,7 @@ urlpatterns = [
 
     #send_email
     url(r'^email/$', check_email),
+
+    #push
+    url(r'^push/$', send_push),
 ]

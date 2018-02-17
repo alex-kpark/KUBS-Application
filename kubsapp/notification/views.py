@@ -5,6 +5,8 @@ from __future__ import unicode_literals
 from notification.models import Student, Notice
 from django.http import HttpResponse, JsonResponse
 from django.db.models import Max
+from pyfcm import FCMNotification
+
 
 from django.shortcuts   import render
 import json
@@ -95,7 +97,6 @@ def get_follow(request, studentId):
     else:
         return HttpResponse(json.dumps({'response':'Request is not in GET'}))
 
-#Auth needs to be added
 def check_profile(request, studentId):
     if request.method == 'GET':
         try:
@@ -113,7 +114,6 @@ def check_profile(request, studentId):
     else:
         return HttpResponse({'response':'Request is not in GET'})
 
-
 def post_notice(request):
     if request.method == 'POST':
         received_noti_data = request.body
@@ -124,9 +124,7 @@ def post_notice(request):
 
             update_noti = Notice.objects.get(number=fetched_num)
 
-
             #Day not fixed
-
             update_noti.day = received_noti_dict['day']
             update_noti.author = received_noti_dict['auth']
             update_noti.title = received_noti_dict['title']
@@ -142,7 +140,6 @@ def post_notice(request):
 
     else:
         return HttpResponse({'request is not in POST form'})
-
 
 def number_increase(request, auth):
     if request.method == 'POST':
@@ -178,7 +175,6 @@ def number_increase(request, auth):
     else:
         return HttpResponse({'request is not in POST form'})
 
-
 def delete_post(request, auth):
     if request.method == 'POST':
 
@@ -197,7 +193,6 @@ def delete_post(request, auth):
 
     else:
         return HttpResponse({'request is not in POST form'})
-
 
 def get_monthly_schedule(request, year, month, id):
 
@@ -231,7 +226,6 @@ def get_monthly_schedule(request, year, month, id):
 
     else:
         return HttpResponse(json.dumps({'response':'Request is not in GET form'}))
-
 
 def get_daily_schedule(request, year, month, day, id):
 
@@ -276,7 +270,6 @@ def get_daily_schedule(request, year, month, day, id):
     else:
         return HttpResponse(json.dumps({'response':'Request is not in GET form'}))
 
-
 def get_specific_event(request, num):
     pass
 
@@ -305,7 +298,6 @@ def get_specific_event(request, num):
 
     else:
         return HttpResponse(json.dumps({'response':'Request is not in GET form'}))
-
 
 def check_email(request):
     pass
@@ -343,3 +335,43 @@ def check_email(request):
     #
     # else:
     #     return HttpResponse(json.dumps({'response':'Request is not in GET form'}))
+
+def send_push(request):
+
+    if request.method == 'POST':
+
+        received_data = request.body
+        received_push_dict = ast.literal_eval(received_data)
+        push_topic = received_push_dict['topic']
+        push_msg = received_push_dict['message']
+
+        try:
+
+            push_service = FCMNotification(api_key='AAAAtoaWwyQ:APA91bFTmtGT2-ku-nnwUgiNgD51IhphQEdemKsAnmfcwVgzwU3OAyxy6UJ8IX7OCZcxWCShPM03_F-IYdfDy6rHs1vbjT04kbngXf7KvGMKUE-cdAFNv4PLEjw2NZMiDE1UU9rxmwcU')
+
+            message_title = "KUB Story"
+            message_body = push_msg
+
+            result = push_service.notify_topic_subscribers(topic_name=push_topic,
+                                                           message_body=message_body,
+                                                           message_title=message_title)
+
+            return HttpResponse(json.dumps({'response':'success'}))
+
+        except Exception as e:
+            print(str(e))
+            return HttpResponse(json.dumps({'response':'fail'}))
+
+    else:
+        return HttpResponse('Request is not in POST form')
+
+
+
+
+
+
+
+
+
+
+
