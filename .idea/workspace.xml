@@ -17,8 +17,8 @@
       <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/kubsapp/notification/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="24" column="50" lean-forward="true" selection-start-line="24" selection-start-column="50" selection-end-line="24" selection-end-column="50" />
+            <state relative-caret-position="345">
+              <caret line="23" column="39" lean-forward="false" selection-start-line="23" selection-start-column="39" selection-end-line="23" selection-end-column="39" />
               <folding />
             </state>
           </provider>
@@ -37,7 +37,7 @@
       <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/kubsapp/kubsapp/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="629">
+            <state relative-caret-position="474">
               <caret line="49" column="34" lean-forward="false" selection-start-line="49" selection-start-column="34" selection-end-line="49" selection-end-column="34" />
               <folding />
             </state>
@@ -47,18 +47,18 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/kubsapp/notification/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="205">
-              <caret line="124" column="32" lean-forward="true" selection-start-line="124" selection-start-column="32" selection-end-line="124" selection-end-column="32" />
+            <state relative-caret-position="207">
+              <caret line="126" column="0" lean-forward="false" selection-start-line="126" selection-start-column="0" selection-end-line="126" selection-end-column="0" />
               <folding>
                 <element signature="e#24#61#0" expanded="true" />
                 <element signature="e#358#912#0" expanded="false" />
                 <element signature="e#974#1023#0" expanded="false" />
                 <element signature="e#1957#2554#0" expanded="false" />
-                <element signature="e#6148#6688#0" expanded="false" />
-                <element signature="e#6748#7814#0" expanded="false" />
-                <element signature="e#7877#9320#0" expanded="false" />
-                <element signature="e#9365#10479#0" expanded="false" />
-                <element signature="e#10512#12354#0" expanded="false" />
+                <element signature="e#5992#6532#0" expanded="false" />
+                <element signature="e#6592#7658#0" expanded="false" />
+                <element signature="e#7721#9164#0" expanded="false" />
+                <element signature="e#9209#10323#0" expanded="false" />
+                <element signature="e#10356#12198#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -107,9 +107,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
+    <option name="x" value="38" />
     <option name="y" value="23" />
     <option name="width" value="1242" />
-    <option name="height" value="996" />
+    <option name="height" value="736" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -151,8 +152,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -181,6 +180,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -222,7 +223,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1242" height="996" extended-state="0" />
+    <frame x="38" y="23" width="1242" height="736" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15458937" sideWeight="0.49402985" order="0" side_tool="false" content_ui="combo" />
@@ -272,11 +273,11 @@
             <element signature="e#358#912#0" expanded="false" />
             <element signature="e#974#1023#0" expanded="false" />
             <element signature="e#1957#2554#0" expanded="false" />
-            <element signature="e#6148#6688#0" expanded="false" />
-            <element signature="e#6748#7814#0" expanded="false" />
-            <element signature="e#7877#9320#0" expanded="false" />
-            <element signature="e#9365#10479#0" expanded="false" />
-            <element signature="e#10512#12354#0" expanded="false" />
+            <element signature="e#5992#6532#0" expanded="false" />
+            <element signature="e#6592#7658#0" expanded="false" />
+            <element signature="e#7721#9164#0" expanded="false" />
+            <element signature="e#9209#10323#0" expanded="false" />
+            <element signature="e#10356#12198#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -415,23 +416,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="16" column="30" lean-forward="false" selection-start-line="16" selection-start-column="30" selection-end-line="16" selection-end-column="30" />
-          <folding>
-            <element signature="e#24#56#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/kubsapp/nohup.out" />
     <entry file="file://$PROJECT_DIR$/kubsapp/notification/migrations/0017_auto_20180215_2043.py" />
     <entry file="file://$PROJECT_DIR$/kubsapp/notification/migrations/0016_auto_20180215_2041.py" />
-    <entry file="file://$PROJECT_DIR$/kubsapp/notification/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="50" lean-forward="true" selection-start-line="24" selection-start-column="50" selection-end-line="24" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/kubsapp/kubsapp/settings.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
@@ -440,9 +430,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/kubsapp/notification/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="39" lean-forward="false" selection-start-line="23" selection-start-column="39" selection-end-line="23" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/kubsapp/kubsapp/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="629">
+        <state relative-caret-position="474">
           <caret line="49" column="34" lean-forward="false" selection-start-line="49" selection-start-column="34" selection-end-line="49" selection-end-column="34" />
           <folding />
         </state>
@@ -450,18 +448,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/kubsapp/notification/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="124" column="32" lean-forward="true" selection-start-line="124" selection-start-column="32" selection-end-line="124" selection-end-column="32" />
+        <state relative-caret-position="207">
+          <caret line="126" column="0" lean-forward="false" selection-start-line="126" selection-start-column="0" selection-end-line="126" selection-end-column="0" />
           <folding>
             <element signature="e#24#61#0" expanded="true" />
             <element signature="e#358#912#0" expanded="false" />
             <element signature="e#974#1023#0" expanded="false" />
             <element signature="e#1957#2554#0" expanded="false" />
-            <element signature="e#6148#6688#0" expanded="false" />
-            <element signature="e#6748#7814#0" expanded="false" />
-            <element signature="e#7877#9320#0" expanded="false" />
-            <element signature="e#9365#10479#0" expanded="false" />
-            <element signature="e#10512#12354#0" expanded="false" />
+            <element signature="e#5992#6532#0" expanded="false" />
+            <element signature="e#6592#7658#0" expanded="false" />
+            <element signature="e#7721#9164#0" expanded="false" />
+            <element signature="e#9209#10323#0" expanded="false" />
+            <element signature="e#10356#12198#0" expanded="false" />
           </folding>
         </state>
       </provider>

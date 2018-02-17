@@ -124,8 +124,6 @@ def post_notice(request):
 
             update_noti = Notice.objects.get(number=fetched_num)
 
-            print(received_noti_dict['day'])
-
             #Day not fixed
 
             update_noti.day = received_noti_dict['day']
@@ -156,16 +154,10 @@ def number_increase(request, auth):
             try:
 
                 max_num = Notice.objects.count()
-
-                # max_dict = Notice.objects.latest('number')
-                # max_num = int(max_dict.number)
-
                 sending_num = max_num+1
-                print(sending_num)
-
+                # print(sending_num)
                 new_info = Notice(number=sending_num)
-                print(new_info)
-
+                # print(new_info)
                 new_info.save()
 
                 return HttpResponse(json.dumps({'response':'success',

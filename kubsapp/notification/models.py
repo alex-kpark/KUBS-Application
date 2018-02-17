@@ -5,7 +5,6 @@ from django.db import models
 
 # Create your models here.
 
-
 class Student(models.Model):
     username = models.CharField(max_length=30, blank=False)
     studentid = models.CharField(max_length=50, blank=False)
@@ -22,7 +21,7 @@ class Notice(models.Model):
 
     number = models.IntegerField(blank=False, primary_key=True, null=False, default=1)
     title = models.CharField(max_length=50, blank=False)
-    day = models.CharField(max_length=100, blank=False, null=False)
+    day = models.CharField(max_length=20, blank=True, null=False)
     image = models.CharField(max_length=300, blank=True, null=True)
     content = models.TextField(max_length=500, blank=False, null=False)
     # Check who is the author of the post - kubs class classifier : class number (which class)
