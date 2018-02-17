@@ -350,9 +350,7 @@ def send_push(request):
             message_title = "KUB Story"
             message_body = push_msg
 
-            result = push_service.notify_topic_subscribers(topic_name=push_topic,
-                                                           message_body=message_body,
-                                                           message_title=message_title)
+            result = push_service.notify_topic_subscribers(topic_name=str(push_topic), message_body=message_body, message_title=message_title)
 
             return HttpResponse(json.dumps({'response':'success'}))
 
