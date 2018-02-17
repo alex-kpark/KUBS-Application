@@ -20,3 +20,4 @@ class StudentAdmin(admin.ModelAdmin):
 class NoticeAdmin(admin.ModelAdmin):
     list_filter = ('title', 'day',)
     search_fields = ('number', 'day',)
+    ordering = ('-number',)

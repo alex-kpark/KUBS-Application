@@ -10,7 +10,7 @@ class Student(models.Model):
     studentid = models.CharField(max_length=50, blank=False)
     password = models.CharField(max_length=50, blank=False)
     email = models.CharField(max_length=50, blank=False)
-    follow = models.CharField(max_length=200, blank=False)
+    follow = models.CharField(max_length=100, blank=False)
     # representative - check whether it has right to post it or not
     represent = models.CharField(max_length=200, blank=False, default=99, null=False)
 
