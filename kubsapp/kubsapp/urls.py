@@ -40,6 +40,9 @@ urlpatterns = [
     #check_profile
     url(r'^check_profile/([0-9]{10})/$', check_profile),
 
+    #check_password
+    url(r'^check_password/$', check_password),
+
     #post_notice
     url(r'^post_notice/$', post_notice),
 

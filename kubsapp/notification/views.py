@@ -114,6 +114,26 @@ def check_profile(request, studentId):
     else:
         return HttpResponse({'response':'Request is not in GET'})
 
+def check_password(request):
+    if request.method == 'POST':
+        received_noti_data = request.body
+        received_noti_dict = ast.literal_eval(received_noti_data)
+
+        try:
+            received_id = received_noti_dict['studentId']
+            received_mail = received_noti_dict['email']
+            profile_selected = Student.objects.get(studentid=received_id, email=received_mail)
+            sending_pw = profile_selected.password
+            return HttpResponse(json.dumps({'response':'success',
+                                            'password':sending_pw}))
+
+        except Exception as e:
+            print(str(e))
+            return HttpResponse(json.dumps({'response':'fail'}))
+
+    else:
+        return HttpResponse({'request is not in POST form'})
+
 def post_notice(request):
     if request.method == 'POST':
         received_noti_data = request.body
@@ -390,3 +410,4 @@ def push_feed(request, id):
                                         'list':sending_list}))
     else:
         return HttpResponse('Request is not in GET form')
+

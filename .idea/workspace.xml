@@ -47,8 +47,8 @@
       <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/kubsapp/kubsapp/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="587">
-              <caret line="67" column="43" lean-forward="false" selection-start-line="67" selection-start-column="43" selection-end-line="67" selection-end-column="43" />
+            <state relative-caret-position="154">
+              <caret line="43" column="46" lean-forward="false" selection-start-line="43" selection-start-column="46" selection-end-line="43" selection-end-column="46" />
               <folding />
             </state>
           </provider>
@@ -57,8 +57,8 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/kubsapp/notification/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="482">
-              <caret line="323" column="0" lean-forward="true" selection-start-line="323" selection-start-column="0" selection-end-line="323" selection-end-column="0" />
+            <state relative-caret-position="290">
+              <caret line="123" column="55" lean-forward="true" selection-start-line="123" selection-start-column="55" selection-end-line="123" selection-end-column="55" />
               <folding>
                 <element signature="e#24#61#0" expanded="true" />
                 <element signature="e#399#953#0" expanded="false" />
@@ -66,16 +66,15 @@
                 <element signature="e#1093#1966#0" expanded="false" />
                 <element signature="e#1998#2595#0" expanded="false" />
                 <element signature="e#2638#3326#0" expanded="false" />
-                <element signature="e#3371#4042#0" expanded="false" />
-                <element signature="e#4074#4942#0" expanded="false" />
-                <element signature="e#4984#6114#0" expanded="false" />
-                <element signature="e#6152#6692#0" expanded="false" />
-                <element signature="e#6751#7816#0" expanded="false" />
-                <element signature="e#7878#9321#0" expanded="false" />
-                <element signature="e#9365#10479#0" expanded="false" />
-                <element signature="e#10511#11314#0" expanded="false" />
-                <element signature="e#11345#12379#0" expanded="false" />
-                <element signature="e#12414#13460#0" expanded="false" />
+                <element signature="e#4849#5717#0" expanded="false" />
+                <element signature="e#5759#6889#0" expanded="false" />
+                <element signature="e#6927#7467#0" expanded="false" />
+                <element signature="e#7526#8591#0" expanded="false" />
+                <element signature="e#8653#10096#0" expanded="false" />
+                <element signature="e#10140#11254#0" expanded="false" />
+                <element signature="e#11286#12089#0" expanded="false" />
+                <element signature="e#12120#13154#0" expanded="false" />
+                <element signature="e#13189#14235#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -117,8 +116,8 @@
         <option value="$PROJECT_DIR$/kubsapp/.gitignore" />
         <option value="$PROJECT_DIR$/kubsapp/kubsapp/settings.py" />
         <option value="$PROJECT_DIR$/kubsapp/notification/models.py" />
-        <option value="$PROJECT_DIR$/kubsapp/kubsapp/urls.py" />
         <option value="$PROJECT_DIR$/kubsapp/notification/admin.py" />
+        <option value="$PROJECT_DIR$/kubsapp/kubsapp/urls.py" />
         <option value="$PROJECT_DIR$/kubsapp/notification/views.py" />
       </list>
     </option>
@@ -126,7 +125,7 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="2" />
     <option name="y" value="23" />
-    <option name="width" value="1242" />
+    <option name="width" value="780" />
     <option name="height" value="736" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -240,7 +239,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="2" y="23" width="1242" height="736" extended-state="0" />
+    <frame x="2" y="23" width="780" height="736" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30094042" sideWeight="0.49402985" order="0" side_tool="false" content_ui="combo" />
@@ -292,16 +291,15 @@
             <element signature="e#1093#1966#0" expanded="false" />
             <element signature="e#1998#2595#0" expanded="false" />
             <element signature="e#2638#3326#0" expanded="false" />
-            <element signature="e#3371#4042#0" expanded="false" />
-            <element signature="e#4074#4942#0" expanded="false" />
-            <element signature="e#4984#6114#0" expanded="false" />
-            <element signature="e#6152#6692#0" expanded="false" />
-            <element signature="e#6751#7816#0" expanded="false" />
-            <element signature="e#7878#9321#0" expanded="false" />
-            <element signature="e#9365#10479#0" expanded="false" />
-            <element signature="e#10511#11314#0" expanded="false" />
-            <element signature="e#11345#12379#0" expanded="false" />
-            <element signature="e#12414#13460#0" expanded="false" />
+            <element signature="e#4849#5717#0" expanded="false" />
+            <element signature="e#5759#6889#0" expanded="false" />
+            <element signature="e#6927#7467#0" expanded="false" />
+            <element signature="e#7526#8591#0" expanded="false" />
+            <element signature="e#8653#10096#0" expanded="false" />
+            <element signature="e#10140#11254#0" expanded="false" />
+            <element signature="e#11286#12089#0" expanded="false" />
+            <element signature="e#12120#13154#0" expanded="false" />
+            <element signature="e#13189#14235#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -464,8 +462,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/kubsapp/kubsapp/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="587">
-          <caret line="67" column="43" lean-forward="false" selection-start-line="67" selection-start-column="43" selection-end-line="67" selection-end-column="43" />
+        <state relative-caret-position="154">
+          <caret line="43" column="46" lean-forward="false" selection-start-line="43" selection-start-column="46" selection-end-line="43" selection-end-column="46" />
           <folding />
         </state>
       </provider>
@@ -480,8 +478,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/kubsapp/notification/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="482">
-          <caret line="323" column="0" lean-forward="true" selection-start-line="323" selection-start-column="0" selection-end-line="323" selection-end-column="0" />
+        <state relative-caret-position="290">
+          <caret line="123" column="55" lean-forward="true" selection-start-line="123" selection-start-column="55" selection-end-line="123" selection-end-column="55" />
           <folding>
             <element signature="e#24#61#0" expanded="true" />
             <element signature="e#399#953#0" expanded="false" />
@@ -489,16 +487,15 @@
             <element signature="e#1093#1966#0" expanded="false" />
             <element signature="e#1998#2595#0" expanded="false" />
             <element signature="e#2638#3326#0" expanded="false" />
-            <element signature="e#3371#4042#0" expanded="false" />
-            <element signature="e#4074#4942#0" expanded="false" />
-            <element signature="e#4984#6114#0" expanded="false" />
-            <element signature="e#6152#6692#0" expanded="false" />
-            <element signature="e#6751#7816#0" expanded="false" />
-            <element signature="e#7878#9321#0" expanded="false" />
-            <element signature="e#9365#10479#0" expanded="false" />
-            <element signature="e#10511#11314#0" expanded="false" />
-            <element signature="e#11345#12379#0" expanded="false" />
-            <element signature="e#12414#13460#0" expanded="false" />
+            <element signature="e#4849#5717#0" expanded="false" />
+            <element signature="e#5759#6889#0" expanded="false" />
+            <element signature="e#6927#7467#0" expanded="false" />
+            <element signature="e#7526#8591#0" expanded="false" />
+            <element signature="e#8653#10096#0" expanded="false" />
+            <element signature="e#10140#11254#0" expanded="false" />
+            <element signature="e#11286#12089#0" expanded="false" />
+            <element signature="e#12120#13154#0" expanded="false" />
+            <element signature="e#13189#14235#0" expanded="false" />
           </folding>
         </state>
       </provider>
