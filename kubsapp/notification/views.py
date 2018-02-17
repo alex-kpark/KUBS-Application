@@ -129,7 +129,8 @@ def check_password(request):
 
         except Exception as e:
             print(str(e))
-            return HttpResponse(json.dumps({'response':'fail'}))
+            return HttpResponse(json.dumps({'response':'fail',
+                                            'password':''}))
 
     else:
         return HttpResponse({'request is not in POST form'})
