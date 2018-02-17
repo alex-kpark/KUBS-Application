@@ -123,8 +123,6 @@ def post_notice(request):
             fetched_num = (received_noti_dict['number'])
 
             update_noti = Notice.objects.get(number=fetched_num)
-
-            #Day not fixed
             update_noti.day = received_noti_dict['day']
             update_noti.author = received_noti_dict['auth']
             update_noti.title = received_noti_dict['title']
