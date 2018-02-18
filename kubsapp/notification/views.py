@@ -393,20 +393,23 @@ def push_feed(request, id):
             else:
                 num = num+1
 
+        print(push_list)
         sending_list = []
+
         for list in push_list:
 
-            sending_dict = {}
-
             try:
-                target = Push.objects.get(push_author=int(list))
-                sending_dict['author'] = target.push_author
-                sending_dict['title'] = target.push_title
-                sending_dict['number'] = target.push_number
-                sending_list.append(sending_dict)
+                sets = Push.objects.filter(push_author=int(list))
+
+                for target in sets:
+                    sending_dict = {}
+                    sending_dict['author'] = target.push_author
+                    sending_dict['title'] = target.push_title
+                    sending_dict['number'] = target.push_number
+                    sending_list.append(sending_dict)
 
             except Exception as e:
-                pass
+                print('error')
 
         return HttpResponse(json.dumps({'response': 'success',
                                         'list':sending_list}))
