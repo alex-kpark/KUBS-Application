@@ -351,6 +351,7 @@ def send_push(request):
         received_push_dict = ast.literal_eval(received_data)
         push_topic = received_push_dict['topic']
         push_msg = received_push_dict['message']
+        push_num = received_push_dict['number']
 
         try:
 
@@ -361,7 +362,7 @@ def send_push(request):
 
             result = push_service.notify_topic_subscribers(topic_name=str(push_topic), message_body=message_body, message_title=message_title)
 
-            sent_push = Push(push_author=push_topic, push_title=push_msg)
+            sent_push = Push(push_author=push_topic, push_title=push_msg, push_number=push_num)
             sent_push.save()
 
             return HttpResponse(json.dumps({'response':'success'}))
@@ -393,15 +394,15 @@ def push_feed(request, id):
                 num = num+1
 
         sending_list = []
-
         for list in push_list:
-            sending_dict = {}
-            try:
-                tar = list
-                target = Push.objects.get(push_author=tar)
 
+            sending_dict = {}
+
+            try:
+                target = Push.objects.get(push_author=int(list))
                 sending_dict['author'] = target.push_author
                 sending_dict['title'] = target.push_title
+                sending_dict['number'] = target.push_number
                 sending_list.append(sending_dict)
 
             except Exception as e:
@@ -411,4 +412,3 @@ def push_feed(request, id):
                                         'list':sending_list}))
     else:
         return HttpResponse('Request is not in GET form')
-

@@ -36,6 +36,7 @@ class Push(models.Model):
     push_author = models.IntegerField(blank=False, null=False, default=0)
     #title
     push_title = models.CharField(max_length=150, blank=True, null=False)
+    push_number = models.IntegerField(blank=False, null=False, default=0)
 
     def __str__(self):
         return str(self.push_author)
