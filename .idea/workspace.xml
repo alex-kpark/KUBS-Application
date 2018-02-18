@@ -14,7 +14,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="models.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/kubsapp/notification/models.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="540">
@@ -54,11 +54,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/kubsapp/notification/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="133" column="0" lean-forward="false" selection-start-line="133" selection-start-column="0" selection-end-line="133" selection-end-column="0" />
+            <state relative-caret-position="417">
+              <caret line="188" column="49" lean-forward="true" selection-start-line="188" selection-start-column="49" selection-end-line="188" selection-end-column="49" />
               <folding>
                 <element signature="e#24#61#0" expanded="true" />
                 <element signature="e#399#953#0" expanded="false" />
@@ -67,12 +67,10 @@
                 <element signature="e#1998#2595#0" expanded="false" />
                 <element signature="e#2638#3326#0" expanded="false" />
                 <element signature="e#4908#5776#0" expanded="false" />
-                <element signature="e#5818#6948#0" expanded="false" />
                 <element signature="e#6986#7526#0" expanded="false" />
                 <element signature="e#7585#8650#0" expanded="false" />
                 <element signature="e#8712#10155#0" expanded="false" />
                 <element signature="e#10199#11313#0" expanded="false" />
-                <element signature="e#11345#12148#0" expanded="false" />
                 <element signature="e#12179#13213#0" expanded="false" />
                 <element signature="e#13248#14294#0" expanded="false" />
               </folding>
@@ -117,8 +115,8 @@
         <option value="$PROJECT_DIR$/kubsapp/kubsapp/settings.py" />
         <option value="$PROJECT_DIR$/kubsapp/notification/admin.py" />
         <option value="$PROJECT_DIR$/kubsapp/kubsapp/urls.py" />
-        <option value="$PROJECT_DIR$/kubsapp/notification/views.py" />
         <option value="$PROJECT_DIR$/kubsapp/notification/models.py" />
+        <option value="$PROJECT_DIR$/kubsapp/notification/views.py" />
       </list>
     </option>
   </component>
@@ -292,12 +290,10 @@
             <element signature="e#1998#2595#0" expanded="false" />
             <element signature="e#2638#3326#0" expanded="false" />
             <element signature="e#4908#5776#0" expanded="false" />
-            <element signature="e#5818#6948#0" expanded="false" />
             <element signature="e#6986#7526#0" expanded="false" />
             <element signature="e#7585#8650#0" expanded="false" />
             <element signature="e#8712#10155#0" expanded="false" />
             <element signature="e#10199#11313#0" expanded="false" />
-            <element signature="e#11345#12148#0" expanded="false" />
             <element signature="e#12179#13213#0" expanded="false" />
             <element signature="e#13248#14294#0" expanded="false" />
           </folding>
@@ -467,10 +463,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/kubsapp/notification/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="36" column="10" lean-forward="true" selection-start-line="36" selection-start-column="10" selection-end-line="36" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/kubsapp/notification/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="133" column="0" lean-forward="false" selection-start-line="133" selection-start-column="0" selection-end-line="133" selection-end-column="0" />
+        <state relative-caret-position="417">
+          <caret line="188" column="49" lean-forward="true" selection-start-line="188" selection-start-column="49" selection-end-line="188" selection-end-column="49" />
           <folding>
             <element signature="e#24#61#0" expanded="true" />
             <element signature="e#399#953#0" expanded="false" />
@@ -479,23 +483,13 @@
             <element signature="e#1998#2595#0" expanded="false" />
             <element signature="e#2638#3326#0" expanded="false" />
             <element signature="e#4908#5776#0" expanded="false" />
-            <element signature="e#5818#6948#0" expanded="false" />
             <element signature="e#6986#7526#0" expanded="false" />
             <element signature="e#7585#8650#0" expanded="false" />
             <element signature="e#8712#10155#0" expanded="false" />
             <element signature="e#10199#11313#0" expanded="false" />
-            <element signature="e#11345#12148#0" expanded="false" />
             <element signature="e#12179#13213#0" expanded="false" />
             <element signature="e#13248#14294#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/kubsapp/notification/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="36" column="10" lean-forward="true" selection-start-line="36" selection-start-column="10" selection-end-line="36" selection-end-column="10" />
-          <folding />
         </state>
       </provider>
     </entry>
