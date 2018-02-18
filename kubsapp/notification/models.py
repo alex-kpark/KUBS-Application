@@ -38,4 +38,4 @@ class Push(models.Model):
     push_title = models.CharField(max_length=150, blank=True, null=False)
 
     def __str__(self):
-        return str(self.push_title)
+        return str(self.push_author)
