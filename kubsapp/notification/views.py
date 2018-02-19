@@ -393,9 +393,9 @@ def push_feed(request, id):
             else:
                 num = num+1
 
-        print(push_list)
         sending_list = []
 
+        push_list = [0,1,2,3,4,5,6,7,8,9,10,11]
         for list in push_list:
 
             try:
@@ -411,7 +411,12 @@ def push_feed(request, id):
             except Exception as e:
                 print('error')
 
+        print(sending_list)
+        sending_list.reverse()
+        print(sending_list)
+        final_list = sending_list[0:10]
+
         return HttpResponse(json.dumps({'response': 'success',
-                                        'list':sending_list}))
+                                        'list':final_list}))
     else:
         return HttpResponse('Request is not in GET form')
