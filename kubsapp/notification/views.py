@@ -331,13 +331,12 @@ def check_email(request):
 
                 except Exception as e:
                     sam = Student.objects.get(represent=100)
-                    sending_list.append(sam.email)
+                    sending_list.append('eroom51st@gmail.com')
 
             return HttpResponse(json.dumps({'response':'success',
                                             'email':sending_list}))
 
         except Exception as e:
-            print(str(e))
             return HttpResponse(json.dumps({'response':'fail'}))
 
     else:
