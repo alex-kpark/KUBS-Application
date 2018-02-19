@@ -396,7 +396,6 @@ def push_feed(request, id):
         sending_list = []
 
         for list in push_list:
-
             try:
                 sets = Push.objects.filter(push_author=int(list))
 

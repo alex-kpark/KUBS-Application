@@ -23,7 +23,7 @@ class Notice(models.Model):
     title = models.CharField(max_length=50, blank=False)
     day = models.CharField(max_length=30, blank=True, null=False)
     image = models.CharField(max_length=300, blank=True, null=True)
-    content = models.TextField(max_length=500, blank=False, null=False)
+    content = models.TextField(max_length=10000, blank=False, null=False)
     # Check who is the author of the post - kubs class classifier : class number (which class)
     author = models.IntegerField(blank=False, default=1, null=False)
 
