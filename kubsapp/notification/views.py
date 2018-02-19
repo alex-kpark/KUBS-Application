@@ -329,9 +329,11 @@ def check_email(request):
                     sam = Student.objects.get(represent=list)
                     sending_list.append(sam.email)
 
+
                 except Exception as e:
                     sam = Student.objects.get(represent=100)
                     sending_list.append('eroom51st@gmail.com')
+
 
             return HttpResponse(json.dumps({'response':'success',
                                             'email':sending_list}))
