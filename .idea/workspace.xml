@@ -57,8 +57,8 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/kubsapp/notification/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="403">
-              <caret line="332" column="38" lean-forward="true" selection-start-line="332" selection-start-column="38" selection-end-line="332" selection-end-column="38" />
+            <state relative-caret-position="448">
+              <caret line="335" column="0" lean-forward="false" selection-start-line="335" selection-start-column="0" selection-end-line="335" selection-end-column="0" />
               <folding>
                 <element signature="e#24#61#0" expanded="true" />
                 <element signature="e#399#953#0" expanded="false" />
@@ -74,8 +74,8 @@
                 <element signature="e#7585#8650#0" expanded="false" />
                 <element signature="e#8712#10155#0" expanded="false" />
                 <element signature="e#10199#11313#0" expanded="false" />
-                <element signature="e#12167#13271#0" expanded="false" />
-                <element signature="e#13306#14614#0" expanded="false" />
+                <element signature="e#12177#13281#0" expanded="false" />
+                <element signature="e#13316#14624#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -300,8 +300,8 @@
             <element signature="e#7585#8650#0" expanded="false" />
             <element signature="e#8712#10155#0" expanded="false" />
             <element signature="e#10199#11313#0" expanded="false" />
-            <element signature="e#12167#13271#0" expanded="false" />
-            <element signature="e#13306#14614#0" expanded="false" />
+            <element signature="e#12177#13281#0" expanded="false" />
+            <element signature="e#13316#14624#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -479,8 +479,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/kubsapp/notification/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="403">
-          <caret line="332" column="38" lean-forward="true" selection-start-line="332" selection-start-column="38" selection-end-line="332" selection-end-column="38" />
+        <state relative-caret-position="448">
+          <caret line="335" column="0" lean-forward="false" selection-start-line="335" selection-start-column="0" selection-end-line="335" selection-end-column="0" />
           <folding>
             <element signature="e#24#61#0" expanded="true" />
             <element signature="e#399#953#0" expanded="false" />
@@ -496,8 +496,8 @@
             <element signature="e#7585#8650#0" expanded="false" />
             <element signature="e#8712#10155#0" expanded="false" />
             <element signature="e#10199#11313#0" expanded="false" />
-            <element signature="e#12167#13271#0" expanded="false" />
-            <element signature="e#13306#14614#0" expanded="false" />
+            <element signature="e#12177#13281#0" expanded="false" />
+            <element signature="e#13316#14624#0" expanded="false" />
           </folding>
         </state>
       </provider>
