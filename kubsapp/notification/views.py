@@ -395,7 +395,6 @@ def push_feed(request, id):
 
         sending_list = []
 
-        push_list = [0,1,2,3,4,5,6,7,8,9,10,11]
         for list in push_list:
 
             try:
@@ -415,6 +414,7 @@ def push_feed(request, id):
         sending_list.reverse()
         print(sending_list)
         final_list = sending_list[0:10]
+        print(final_list)
 
         return HttpResponse(json.dumps({'response': 'success',
                                         'list':final_list}))
