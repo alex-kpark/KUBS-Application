@@ -17,8 +17,8 @@
       <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/kubsapp/notification/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="478">
-              <caret line="32" column="0" lean-forward="true" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+            <state relative-caret-position="480">
+              <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -47,7 +47,7 @@
       <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/kubsapp/kubsapp/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="178">
+            <state relative-caret-position="483">
               <caret line="43" column="46" lean-forward="false" selection-start-line="43" selection-start-column="46" selection-end-line="43" selection-end-column="46" />
               <folding />
             </state>
@@ -57,25 +57,25 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/kubsapp/notification/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="448">
-              <caret line="335" column="0" lean-forward="false" selection-start-line="335" selection-start-column="0" selection-end-line="335" selection-end-column="0" />
+            <state relative-caret-position="520">
+              <caret line="60" column="64" lean-forward="false" selection-start-line="60" selection-start-column="64" selection-end-line="60" selection-end-column="64" />
               <folding>
                 <element signature="e#24#61#0" expanded="true" />
                 <element signature="e#399#953#0" expanded="false" />
-                <element signature="e#1015#1064#0" expanded="false" />
-                <element signature="e#1093#1966#0" expanded="false" />
-                <element signature="e#1998#2595#0" expanded="false" />
-                <element signature="e#2638#3326#0" expanded="false" />
-                <element signature="e#3371#4042#0" expanded="false" />
-                <element signature="e#4077#4876#0" expanded="false" />
-                <element signature="e#4908#5776#0" expanded="false" />
-                <element signature="e#5818#6948#0" expanded="false" />
-                <element signature="e#6986#7526#0" expanded="false" />
-                <element signature="e#7585#8650#0" expanded="false" />
-                <element signature="e#8712#10155#0" expanded="false" />
-                <element signature="e#10199#11313#0" expanded="false" />
-                <element signature="e#12177#13281#0" expanded="false" />
-                <element signature="e#13316#14624#0" expanded="false" />
+                <element signature="e#989#1038#0" expanded="false" />
+                <element signature="e#2225#2822#0" expanded="false" />
+                <element signature="e#2865#3553#0" expanded="false" />
+                <element signature="e#3598#4269#0" expanded="false" />
+                <element signature="e#4304#5103#0" expanded="false" />
+                <element signature="e#5135#6003#0" expanded="false" />
+                <element signature="e#6045#7175#0" expanded="false" />
+                <element signature="e#7213#7753#0" expanded="false" />
+                <element signature="e#7812#8877#0" expanded="false" />
+                <element signature="e#8939#10382#0" expanded="false" />
+                <element signature="e#10426#11540#0" expanded="false" />
+                <element signature="e#11572#12373#0" expanded="false" />
+                <element signature="e#12404#13508#0" expanded="false" />
+                <element signature="e#13543#14851#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -101,6 +101,7 @@
       <find>database</find>
       <find>primary</find>
       <find>save</find>
+      <find>get</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -124,10 +125,9 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="x" value="413" />
-    <option name="y" value="110" />
-    <option name="width" value="785" />
-    <option name="height" value="735" />
+    <option name="y" value="23" />
+    <option name="width" value="1280" />
+    <option name="height" value="736" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -268,7 +268,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="26" />
+      <option name="time" value="27" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -288,20 +288,20 @@
           <folding>
             <element signature="e#24#61#0" expanded="true" />
             <element signature="e#399#953#0" expanded="false" />
-            <element signature="e#1015#1064#0" expanded="false" />
-            <element signature="e#1093#1966#0" expanded="false" />
-            <element signature="e#1998#2595#0" expanded="false" />
-            <element signature="e#2638#3326#0" expanded="false" />
-            <element signature="e#3371#4042#0" expanded="false" />
-            <element signature="e#4077#4876#0" expanded="false" />
-            <element signature="e#4908#5776#0" expanded="false" />
-            <element signature="e#5818#6948#0" expanded="false" />
-            <element signature="e#6986#7526#0" expanded="false" />
-            <element signature="e#7585#8650#0" expanded="false" />
-            <element signature="e#8712#10155#0" expanded="false" />
-            <element signature="e#10199#11313#0" expanded="false" />
-            <element signature="e#12177#13281#0" expanded="false" />
-            <element signature="e#13316#14624#0" expanded="false" />
+            <element signature="e#989#1038#0" expanded="false" />
+            <element signature="e#2225#2822#0" expanded="false" />
+            <element signature="e#2865#3553#0" expanded="false" />
+            <element signature="e#3598#4269#0" expanded="false" />
+            <element signature="e#4304#5103#0" expanded="false" />
+            <element signature="e#5135#6003#0" expanded="false" />
+            <element signature="e#6045#7175#0" expanded="false" />
+            <element signature="e#7213#7753#0" expanded="false" />
+            <element signature="e#7812#8877#0" expanded="false" />
+            <element signature="e#8939#10382#0" expanded="false" />
+            <element signature="e#10426#11540#0" expanded="false" />
+            <element signature="e#11572#12373#0" expanded="false" />
+            <element signature="e#12404#13508#0" expanded="false" />
+            <element signature="e#13543#14851#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -463,15 +463,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/kubsapp/notification/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="478">
-          <caret line="32" column="0" lean-forward="true" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+        <state relative-caret-position="480">
+          <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/kubsapp/kubsapp/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="178">
+        <state relative-caret-position="483">
           <caret line="43" column="46" lean-forward="false" selection-start-line="43" selection-start-column="46" selection-end-line="43" selection-end-column="46" />
           <folding />
         </state>
@@ -479,25 +479,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/kubsapp/notification/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="448">
-          <caret line="335" column="0" lean-forward="false" selection-start-line="335" selection-start-column="0" selection-end-line="335" selection-end-column="0" />
+        <state relative-caret-position="520">
+          <caret line="60" column="64" lean-forward="false" selection-start-line="60" selection-start-column="64" selection-end-line="60" selection-end-column="64" />
           <folding>
             <element signature="e#24#61#0" expanded="true" />
             <element signature="e#399#953#0" expanded="false" />
-            <element signature="e#1015#1064#0" expanded="false" />
-            <element signature="e#1093#1966#0" expanded="false" />
-            <element signature="e#1998#2595#0" expanded="false" />
-            <element signature="e#2638#3326#0" expanded="false" />
-            <element signature="e#3371#4042#0" expanded="false" />
-            <element signature="e#4077#4876#0" expanded="false" />
-            <element signature="e#4908#5776#0" expanded="false" />
-            <element signature="e#5818#6948#0" expanded="false" />
-            <element signature="e#6986#7526#0" expanded="false" />
-            <element signature="e#7585#8650#0" expanded="false" />
-            <element signature="e#8712#10155#0" expanded="false" />
-            <element signature="e#10199#11313#0" expanded="false" />
-            <element signature="e#12177#13281#0" expanded="false" />
-            <element signature="e#13316#14624#0" expanded="false" />
+            <element signature="e#989#1038#0" expanded="false" />
+            <element signature="e#2225#2822#0" expanded="false" />
+            <element signature="e#2865#3553#0" expanded="false" />
+            <element signature="e#3598#4269#0" expanded="false" />
+            <element signature="e#4304#5103#0" expanded="false" />
+            <element signature="e#5135#6003#0" expanded="false" />
+            <element signature="e#6045#7175#0" expanded="false" />
+            <element signature="e#7213#7753#0" expanded="false" />
+            <element signature="e#7812#8877#0" expanded="false" />
+            <element signature="e#8939#10382#0" expanded="false" />
+            <element signature="e#10426#11540#0" expanded="false" />
+            <element signature="e#11572#12373#0" expanded="false" />
+            <element signature="e#12404#13508#0" expanded="false" />
+            <element signature="e#13543#14851#0" expanded="false" />
           </folding>
         </state>
       </provider>

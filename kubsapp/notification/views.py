@@ -30,7 +30,6 @@ def student_login(request):
     else:
         pass
 
-#Does it need to be done?
 def check_studentid(request):
     return HttpResponse({'response':'not developed'})
 
@@ -42,19 +41,24 @@ def sign_up(request):
         # print(type(signup_data_dict))
         # print(signup_data_dict)
 
-        try:
-            #To bring the table, just open the smallest bracket and put params
-            new_signed_info = Student(username=signup_data_dict['name'],
-                          studentid=signup_data_dict['studentId'],
-                          password=signup_data_dict['password'],
-                          email=signup_data_dict['email'])
-            new_signed_info.save()
-            return HttpResponse(json.dumps({'response':'success'}))
+        test_set = Student.objects.filter(studentid=signup_data_dict['studentId'])
 
-        except Exception as e:
-            print(str(e))
+        if not test_set.exists():
+            try:
+                #To bring the table, just open the smallest bracket and put params
+
+                new_signed_info = Student(username=signup_data_dict['name'],
+                                  studentid=signup_data_dict['studentId'],
+                                  password=signup_data_dict['password'],
+                                  email=signup_data_dict['email'])
+                new_signed_info.save()
+                return HttpResponse(json.dumps({'response':'success'}))
+
+            except Exception as e:
+                print(str(e))
+                return HttpResponse(json.dumps({'response':'fail'}))
+        else:
             return HttpResponse(json.dumps({'response':'fail'}))
-
     else:
         return HttpResponse({'response':'Request is not in POST'})
 
